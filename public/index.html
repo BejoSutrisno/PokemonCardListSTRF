@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pokemon Card Collection</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+<div id="loginDiv">
+  <p class="h2">LOGIN PORTAL</p>
+  <div class="mainForm">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+  </div>
+  <button id="loginBtn" class="btn btn-primary">Login</button>
+  <p id="loginError" style="color:red"></p>
+</div>
+
+<div id="mainDiv" style="display:none">
+  <h1>Pokemon Card Collection</h1>
+  <div class="CoverFormCard">
+
+  <form id="pokemonForm" enctype="multipart/form-data" style="display:none">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="type" placeholder="Type" required>
+    <input type="number" id="level" placeholder="HP" required>
+    <input type="text" id="ability" placeholder="Ability">
+    <input type="file" id="image" name="image" accept="image/*">
+    <br>
+    <img id="preview" src="" alt="">
+    <button class="btn-primary" type="submit">Add Pokemon</button>
+  </form>
+  </div>
+
+  <div id="filterDiv">
+    <select id="typeFilter">
+      <option value="">All Types</option>
+      <option value="fire">Fire</option>
+      <option value="water">Water</option>
+      <option value="grass">Grass</option>
+      <option value="electric">Electric</option>
+      <option value="psychic">Psychic</option>
+      <option value="fighting">Fighting</option>
+    </select>
+  </div>
+
+  <div id="pokemonGrid" class="grid"></div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImg" src="">
+    <h3 id="modalName"></h3>
+    <p id="modalType"></p>
+    <p id="modalHP"></p>
+    <p id="modalAbility"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="preview.js"></script>
+<script src="pokemonClass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
